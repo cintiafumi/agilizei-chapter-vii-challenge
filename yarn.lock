@@ -23,6 +23,13 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@bahmutov/spok@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bahmutov/spok/-/spok-1.2.0.tgz#0d72d4ec584402adca7ce762609b868faf8c7aac"
+  integrity sha512-EBZ968EAEE0oQ2eba9OyXMixtpxt3tQrSo2u8uZL4gCJF78fEvZlpHCqv24PdGLvBUpY0ceFUng2brrQM7tw3g==
+  dependencies:
+    ansicolors "~0.3.2"
+
 "@cypress/request@^2.88.6":
   version "2.88.6"
   resolved "https://registry.yarnpkg.com/@cypress/request/-/request-2.88.6.tgz#a970dd675befc6bdf8a8921576c01f51cc5798e9"
@@ -185,6 +192,11 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   integrity sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
   dependencies:
     color-convert "^2.0.1"
+
+ansicolors@~0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/ansicolors/-/ansicolors-0.3.2.tgz#665597de86a9ffe3aa9bfbe6cae5c6ea426b4979"
+  integrity sha1-ZlWX3oap/+Oqm/vmyuXG6kJrSXk=
 
 arch@^2.2.0:
   version "2.2.0"
@@ -449,6 +461,14 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+cy-spok@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/cy-spok/-/cy-spok-1.3.4.tgz#bcf0e0d0e2a215d0e16924e64bfc1e5529927765"
+  integrity sha512-n2V6PeERpXKLEDbi8bHY7i9gNTOqWETQBJzOThEdZcHuIjU6lpdVBJ8DXoY3U6bLI64r02ox45f49NcWGrkU9A==
+  dependencies:
+    "@bahmutov/spok" "1.2.0"
+    strip-ansi "6.0.1"
 
 cypress@^8.7.0:
   version "8.7.0"
@@ -1884,7 +1904,7 @@ string.prototype.trimstart@^1.0.4:
     call-bind "^1.0.2"
     define-properties "^1.1.3"
 
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+strip-ansi@6.0.1, strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
