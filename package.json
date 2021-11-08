@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test:healthcheck": "npx cypress run --env grep=@healthcheck"
+  },
   "devDependencies": {
     "cy-spok": "^1.3.4",
     "cypress": "^8.7.0",
