@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test:healthcheck": "npx cypress run --env grep=@healthcheck"
+    "test:healthcheck": "npx cypress run --env grep=@healthcheck",
+    "test:contract": "npx cypress run --env grep=@contract",
+    "test:functional": "npx cypress run --env grep=@functional"
   },
   "devDependencies": {
     "cy-spok": "^1.3.4",
