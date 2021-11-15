@@ -60,8 +60,9 @@ describe('Booking', () => {
   it('should not update a booking @functional', () => {
     const bookingid = 'test'
 
-    req.put(`booking/${bookingid}`, booking).then(({ status }) => {
+    req.put(`booking/${bookingid}`, booking).then(({ status, body }) => {
       assertion.status(status, 405)
+      assertion.notAllowed(body)
     })
   })
 
@@ -76,16 +77,18 @@ describe('Booking', () => {
 
   it('should not delete an inexistent booking @functional', () => {
     const bookingid = 'test'
-    req.delete(`booking/${bookingid}`).then(({ status }) => {
+    req.delete(`booking/${bookingid}`).then(({ status, body }) => {
       assertion.status(status, 405)
+      assertion.notAllowed(body)
     })
   })
 
   it('should not delete a booking without token @functional', () => {
     req.post('booking', booking).then(({ body }) => {
       const { bookingid } = body
-      req.delete(`booking/${bookingid}`, null).then(({ status }) => {
+      req.delete(`booking/${bookingid}`, null).then(({ status, body }) => {
         assertion.status(status, 403)
+        assertion.forbidden(body)
       })
     })
   })
@@ -97,8 +100,9 @@ describe('Booking', () => {
 
     req.post('booking', booking).then(({ body }) => {
       const { bookingid } = body
-      req.delete(`booking/${bookingid}`, headers).then(({ status }) => {
+      req.delete(`booking/${bookingid}`, headers).then(({ status, body }) => {
         assertion.status(status, 403)
+        assertion.forbidden(body)
       })
     })
   })
