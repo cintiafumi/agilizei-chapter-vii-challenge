@@ -1,3 +1,9 @@
 {
-  "baseUrl": "https://treinamento-api.herokuapp.com/"
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://treinamento-api.herokuapp.com/",
+  "videoCompression": 32,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
